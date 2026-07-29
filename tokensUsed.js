@@ -1,15 +1,11 @@
 function calculateAiCost(tokensUsed) {
-
-if (typeof tokensUsed ==='number' ){
-    if(tokensUsed >=0){
-    let token_consumed= tokensUsed - 500;
-    let cost = Math.floor(token_consumed/100)*5
-    if (cost < 0){
-        return 0
-    } else return cost
-    } return "Invalid"
-       
-} else return "Invalid"
-
-
+  if (typeof tokensUsed !== "number" || tokensUsed < 0) {
+    return "Invalid";
+  } else if (tokensUsed <= 500) {
+    return 0;
+  } else {
+    let extra_token = tokensUsed - 500;
+    let cost = Math.floor(extra_token / 100) * 5;
+    return cost;
+  }
 }
