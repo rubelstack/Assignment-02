@@ -13,6 +13,3 @@ if (typeof tokensUsed ==='number' ){
 
 
 }
-
-
-console.log(calculateAiCost(1000));
