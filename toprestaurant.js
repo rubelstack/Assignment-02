@@ -15,7 +15,3 @@ function topRatedRestaurant(restaurants) {
   }
   return toprestaurnt.toUpperCase();
 }
-
-const arr = [];
-
-console.log(topRatedRestaurant(arr));
