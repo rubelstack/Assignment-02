@@ -2,16 +2,15 @@ function topRatedRestaurant(restaurants) {
   if (!Array.isArray(restaurants) || restaurants.length === 0) {
     return "Invalid";
   }
-  let toprestaurnt = "";
+  let toprestaurant = "";
   let calculate = 0;
   for (const number of restaurants) {
-    restaurantname = "";
     let name = number.name;
     let ratings = number.rating;
     if (ratings > calculate) {
-      calculate += ratings;
-      toprestaurnt = name;
+      calculate = ratings;
+      toprestaurant = name;
     }
   }
-  return toprestaurnt.toUpperCase();
+  return toprestaurant.toUpperCase();
 }
