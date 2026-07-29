@@ -8,11 +8,11 @@ function averageResponseTime(times) {
   }
 
   let total = 0;
-  for (let i = 1; i <= times.length; i++) {
-    total = total + time[i];
+  for (let i = 0; i < times.length; i++) {
+    total = total + times[i];
   }
 
-  return total / times;
+  return total / times.length;
 }
 
 console.log(averageResponseTime([120, 200, 150, 130]));
