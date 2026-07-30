@@ -1,5 +1,5 @@
 function averageResponseTime(times) {
-  if (Array.isArray(times) === false) {
+  if (Array.isArray(times) === false || !Array.isArray(times)) {
     return "Invalid";
   }
 
@@ -9,9 +9,13 @@ function averageResponseTime(times) {
 
   let total = 0;
   for (let i = 0; i < times.length; i++) {
-    total = total + times[i];
+    if(typeof times[i] !== "number"){
+      return "Invalid"
+    } else {
+  total = total + times[i];
+    }
+  
   }
 
   return total / times.length;
 }
-
